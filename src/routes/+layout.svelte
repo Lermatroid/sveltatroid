@@ -1,6 +1,13 @@
 <script lang="ts">
 	import '../app.css';
-	let { children } = $props();
+	import { QueryClientProvider } from '@tanstack/svelte-query';
+	import { trpc } from '$lib/trpc';
+
+	const { data, children } = $props();
+
+	const queryClient = trpc.hydrateFromServer(data.trpc);
 </script>
 
-{@render children()}
+<QueryClientProvider client={queryClient}>
+	{@render children()}
+</QueryClientProvider>
