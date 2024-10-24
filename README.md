@@ -9,6 +9,8 @@ This is a template for a Svelte 5 app using the following technologies:
 - Prettier
 - Pnpm
 
+You probably don't want to use this! Generally CLI based things are better as they let you pick what you need and what you don't with ease. Certainly look into something like [Create o7 App](https://github.com/ottomated/create-o7-app)!
+
 ## Creating a project
 
 tbd
